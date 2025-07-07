@@ -23,3 +23,4 @@ if (!ctx) {
 }
 
 //Reformatted by AI. Will start from scratch on another project, to learn about javascript.
+//Works normally on netlify link but in github doesn't work.
