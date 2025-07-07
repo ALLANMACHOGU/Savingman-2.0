@@ -1,14 +1,20 @@
 import {ctx,canvas} from './canvas';
 
-
 export const img = document.createElement('img'); 
-
 img.src = 'Savingman.png'; 
+img.alt = 'Savingman sprite'; // Accessibility
 
-document
-  .querySelector('#assets')
-  .appendChild(img);
+const assetsContainer = document.querySelector('#assets');
+if (assetsContainer) {
+  assetsContainer.appendChild(img);
+} else {
+  console.warn('No #assets container found in the DOM.');
+}
 
+// Optionally, handle image loading:
+img.addEventListener('load', () => {
+  console.log('Image loaded!');
+});
 
 
 export const image = { 
